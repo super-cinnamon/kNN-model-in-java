@@ -2,29 +2,31 @@ import java.util.ArrayList;
 
 public class Instance {
     //this class represents an element, in other words the data X and the label Y if there is any
-    private ArrayList<Integer> vals = new ArrayList<>();
+    private ArrayList<Double> vals = new ArrayList<>();
     private String label;
     //constructor for test instance
-    public Instance(int a, int b, int c) {
+    public Instance(Double a, Double b, Double c, Double d) {
         vals.add(a);
         vals.add(b);
         vals.add(c);
+        vals.add(d);
         label = null;
     }
     //constructor for training instance
-    public Instance(int a, int b, int c, String label) {
+    public Instance(Double a, Double b, Double c, Double d,String label) {
         vals.add(a);
         vals.add(b);
         vals.add(c);
+        vals.add(d);
         this.label = label;
     }
     //constructor for faster creation
-    public Instance(ArrayList<Integer> vals, String label) {
+    public Instance(ArrayList<Double> vals, String label) {
         this.vals = vals;
         this.label = label;
     }
     //getters and setters because all attributes are private
-    public ArrayList<Integer> getVals() {
+    public ArrayList<Double> getVals() {
         return vals;
     }
 
@@ -32,7 +34,7 @@ public class Instance {
         return label;
     }
 
-    public void setVals(ArrayList<Integer> vals) {
+    public void setVals(ArrayList<Double> vals) {
         this.vals = vals;
     }
 
